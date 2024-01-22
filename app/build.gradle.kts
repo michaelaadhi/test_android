@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mike.project"
+    namespace = "com.mike.project.test"
     compileSdk = libs.versions.build.sdk.compile.get().toInt()
 //    ndkVersion = libs.versions.build.ndk.get()
 
@@ -31,6 +31,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+
         }
     }
 
@@ -49,10 +50,12 @@ android {
     productFlavors {
         create("production") {
             dimension = "server"
+            resValue("string", "file_provider", "com.mike.project.test.provider")
         }
         create("staging") {
             applicationIdSuffix = ".staging"
             dimension = "server"
+            resValue("string", "file_provider", "com.mike.project.test.staging.provider")
         }
     }
 
