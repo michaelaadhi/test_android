@@ -1,0 +1,19 @@
+{
+  "assetsServer":"https://assets-staging.krom.id/",
+  "apiCoreServer":"https://api-staging.krom.id/core/",
+  "apiCommonServer":"https://api-staging.krom.id/common/",
+  "apiOauthServer":"https://api-staging.krom.id/oauth/",
+  "apiBillerServer":"https://api-staging.krom.id/biller/",
+  "moeKey":"8XFSJKNDM42UY7YVTLQO1K6S",
+  "appsflyerKey":"Ep37DQnuM7ZQgYMfwdKYdn",
+  "amplitudeKey":"b0d730785853aae4ece50606372d3129",
+  "uxcamAppKey":"zasvdtedd4e86id",
+  "freshchatAppId":"ca28b9e5-57eb-474e-bf06-c7dc5fdb0cc8",
+  "freshchatAppKey":"994dd0ad-cb8f-4f64-bb64-4c2106b119b2",
+  "livenessKey":"lXw7yjaKJpiWWk_ERsAtrJrlPUab6VRP",
+  "livenessSecret":"5HEwMFKSHjeE95SeVtSYfnbQn7FXCk16",
+  "googleClientId":"645880469938-qnrskmq1t4g59tk2do90f74qukot8r2s.apps.googleusercontent.com",
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA564T8z2dvJP23mIDtYqVgNpC4zXL8lqT1iZWLN8Ax/JCCJJY5wNlyoH6dh8V2xvl8HxLhqb61clc5wqAdfGUnuD7m0BubTr+gJL/4ZQEjf1Fr5byruNBwjn0c7h39xOu9YmdZPjk25JbtXgTG1snpL9dkwiyyO5gA6fQwiDTsxa6UmXhyDFRXJq1ErTdJYRV1EsKJsOiNbQS0yUETugtuaD2YZg/+7M7P9akLD9yZYyW5/MyOsNVNk/mXO/2e5/w1+EKnDbliReEKuID+5ZBXUzNUPFDw5ejI575g7RaeMQR0r9FDT8G5iOSX8iB6hChscpgLcVDuljIDzKV0higswIDAQAB",
+  "pinningKrom1": "sha256/+g9Ws6WQ/cUJ8xHP6RMlekA0U2hXGcjiEH15MD7jtto=",
+  "remoteConfigInterval": 0
+}

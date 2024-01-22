@@ -1,24 +1,171 @@
 [versions]
-agp = "8.1.2"
-org-jetbrains-kotlin-android = "1.9.0"
-core-ktx = "1.9.0"
-junit = "4.13.2"
-androidx-test-ext-junit = "1.1.5"
-espresso-core = "3.5.1"
-appcompat = "1.6.1"
-material = "1.10.0"
+#build
+build-sdk-min="26"
+build-sdk-target="33"
+build-sdk-compile="34"
+build-tools="33.0.1"
+build-ndk="21.1.6352462"
 
-[libraries]
-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+#Android
+android-gradle = "8.2.1"
+androidx-lifecycle = "2.7.0"
+
+#Firebase
+firebase-appdistribution = "16.0.0-beta11"
+
+#Google
+google-ksp = "1.9.10-1.0.13"
+
+#Jetbrains
+jetbrains-kotlin = "1.9.10"
+jetbrains-kotlinx-coroutines-android="1.7.1"
+
+#Squareup
+squareup-okhttp = "5.0.0-alpha.11"
+squareup-retrofit = "2.9.0"
+
+#Misc-Glide
+glide = "4.15.1"
 
 [plugins]
-com-android-application = { id = "com.android.application", version.ref = "agp" }
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+#Android
+android-application = { id = "com.android.application", version.ref = "android-gradle" }
+android-library = { id = "com.android.library", version.ref = "android-gradle" }
+
+#Google
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }
+
+#Jetbrains
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "jetbrains-kotlin" }
+jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "jetbrains-kotlin" }
+jetbrains-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "jetbrains-kotlin" }
+
+[libraries]
+#Android
+android-installreferrer = { module = "com.android.installreferrer:installreferrer", version = "2.2" }
+android-tools-desugar = { module = "com.android.tools:desugar_jdk_libs", version = "2.0.4" }
+android-tools-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle" }
+android-tools-gradle-api = { module = "com.android.tools.build:gradle-api", version.ref = "android-gradle" }
+androidx-core = { module = "androidx.core:core-ktx", version = "1.12.0" }
+androidx-app-compat = { module = "androidx.appcompat:appcompat", version = "1.6.1" }
+androidx-animation = { module = "androidx.core:core-animation", version = "1.0.0-rc01" }
+androidx-preference = { module = "androidx.preference:preference-ktx", version = "1.2.1" }
+androidx-biometric = { module = "androidx.biometric:biometric", version = "1.1.0" }
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version = "1.6.2" }
+androidx-constraint-layout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+androidx-swipe-refresh-layout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version = "1.1.0" }
+androidx-browser = { module = "androidx.browser:browser", version = "1.7.0" }
+
+androidx-lifecycle-common = { module = "androidx.lifecycle:lifecycle-common", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "androidx-lifecycle" }
+
+#Firebase
+firebase-bom = { module = "com.google.firebase:firebase-bom", version = "32.7.0" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-config = { module = "com.google.firebase:firebase-config-ktx" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.9.9" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-perf = { module = "com.google.firebase:firebase-perf-ktx" }
+firebase-perf-gradle = { module = "com.google.firebase:perf-plugin", version = "1.4.2" }
+firebase-play-integrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
+firebase-appcheck-debug = { module = "com.google.firebase:firebase-appcheck-debug", version = "17.1.1" }
+firebase-appdistribution-api = { module = "com.google.firebase:firebase-appdistribution-api-ktx", version.ref = "firebase-appdistribution" }
+firebase-appdistribution-main = { module = "com.google.firebase:firebase-appdistribution", version.ref = "firebase-appdistribution" }
+firebase-appdistribution-gradle = { module = "com.google.firebase:firebase-appdistribution-gradle", version = "4.0.1" }
+
+#Google
+google-gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
+google-material = { module = "com.google.android.material:material", version = "1.11.0" }
+google-flexbox = { module = "com.google.android.flexbox:flexbox", version = "3.0.0" }
+google-library-places = { module = "com.google.android.libraries.places:places", version = "3.3.0" }
+google-services = { module = "com.google.gms:google-services", version = "4.4.0" }
+google-ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "google-ksp" }
+
+google-play-core = { module = "com.google.android.play:core", version = "1.10.3" }
+google-play-auth-main = { module = "com.google.android.gms:play-services-auth", version = "20.7.0" }
+google-play-auth-phone = { module = "com.google.android.gms:play-services-auth-api-phone", version = "18.0.1" }
+google-play-analytics = { module = "com.google.android.gms:play-services-analytics", version = "18.0.4" }
+google-play-maps = { module = "com.google.android.gms:play-services-maps", version = "18.2.0" }
+google-play-appset = { module = "com.google.android.gms:play-services-appset", version = "16.0.2" }
+google-play-mlkit-barcode = { module = "com.google.android.gms:play-services-mlkit-barcode-scanning", version = "18.3.0" }
+
+#jetbrains
+jetbrains-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "jetbrains-kotlin" }
+jetbrains-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "jetbrains-kotlin" }
+jetbrains-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "jetbrains-kotlin" }
+jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "jetbrains-kotlinx-coroutines-android" }
+jetbrains-kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "jetbrains-kotlinx-coroutines-android" }
+
+#Squareup
+squareup-otto = { module = "com.squareup:otto", version = "1.3.8" }
+squareup-okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "squareup-okhttp" }
+squareup-okhttp-main = { module = "com.squareup.okhttp3:okhttp" }
+squareup-okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor" }
+squareup-retrofit-main = { module = "com.squareup.retrofit2:retrofit", version.ref = "squareup-retrofit" }
+squareup-retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "squareup-retrofit" }
+
+#Others
+objectbox-plugin = { module = "io.objectbox:objectbox-gradle-plugin", version = "3.7.0" }
+bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version = "8.1.0" }
+
+misc-calendar-view = { module = "com.github.kizitonwose:CalendarView", version = "1.0.4" }
+misc-fotoapparat = { module = "io.fotoapparat:fotoapparat", version = "2.7.0" }
+misc-jsoup = { module = "org.jsoup:jsoup", version = "1.15.4" }
+misc-konfetti = { module = "nl.dionsegijn:konfetti-xml", version = "2.0.2" }
+misc-lottie = { module = "com.airbnb.android:lottie", version = "6.0.0" }
+misc-relinker = { module = "com.getkeepsafe.relinker:relinker", version = "1.4.5" }
+misc-rootbeer = { module = "com.scottyab:rootbeer-lib", version = "0.1.0" }
+misc-shimmer = { module = "com.facebook.shimmer:shimmer", version = "0.5.0" }
+misc-glide-main = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+misc-glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
+misc-glide-okhttp-integration = { module = "com.github.bumptech.glide:okhttp3-integration", version.ref = "glide" }
+
+devtools-pandora-debug = { module = "com.github.whataa:pandora", version = "androidx_v2.1.0" }
+devtools-pandora-release = { module = "com.github.whataa:pandora-no-op", version = "v2.0.3" }
+devtools-bugsnag-main = { module = "com.bugsnag:bugsnag-android", version = "5.30.0" }
+devtools-bugsnag-plugin-okhttp = { module = "com.bugsnag:bugsnag-plugin-android-okhttp", version = "5.30.0" }
+devtools-toolargetool = { module = "com.gu.android:toolargetool", version = "0.3.0" }
+
+gradle-bouncycastle = { module = "org.bouncycastle:bcpkix-jdk18on", version = "1.76" }
+gradle-json = { module = "org.json:json", version = "20231013" }
 
 [bundles]
+kotlin-base = [
+    "jetbrains-kotlin-stdlib",
+    "jetbrains-kotlin-reflect",
+    "jetbrains-kotlinx-coroutines-android",
+    "jetbrains-kotlinx-coroutines-play-services"
+]
 
+androidx-ui = [
+    "androidx-core",
+    "androidx-app-compat",
+    "androidx-fragment",
+    "androidx-constraint-layout",
+    "androidx-swipe-refresh-layout",
+    "androidx-animation"
+]
+
+androidx-lifecycle = [
+    "androidx-lifecycle-common",
+    "androidx-lifecycle-runtime",
+    "androidx-lifecycle-livedata",
+    "androidx-lifecycle-viewmodel",
+    "androidx-lifecycle-savedstate",
+    "androidx-lifecycle-process",
+    "androidx-lifecycle-service"
+]
+
+network = [
+    "squareup-okhttp-bom",
+    "squareup-okhttp-main",
+    "squareup-okhttp-logging",
+    "squareup-retrofit-main",
+    "squareup-retrofit-gson"
+]
